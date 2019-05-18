@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eu
+set -meu
 
 root_mount=$1
 root_type=$2
