@@ -135,14 +135,6 @@ log "   ISO => $iso"
 log "   Digital Ocean => $digitalocean"
 log "   Working directory => $working_directory"
 log "   Extra config => $extra_config"
-log_start "Continue? [yn] "
-read -n 1 -r
-log_end
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-  log "Exiting; nothing was harmed"
-  exit 1
-fi
 
 pushd "$working_directory"
   log "Downloading NixOS $iso"
